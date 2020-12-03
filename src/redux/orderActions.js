@@ -9,7 +9,7 @@ const createOrder = (order) => async (dispatch) => {
     method: "POST",
     data: order,
     withCredentials: true,
-    url: "http://localhost:5000/api/orders",
+    url: `${types.api}/api/orders`,
     headers: { "x-auth-token": token },
   })
     .then((res) => {
@@ -35,7 +35,7 @@ const detailOrder = (orderId) => (dispatch) => {
   axios({
     method: "GET",
     withCredentials: true,
-    url: `http://localhost:5000/api/orders/${orderId}`,
+    url: `${types.api}/api/orders/${orderId}`,
     headers: { "x-auth-token": token },
   })
     .then((res) => {
@@ -61,7 +61,7 @@ const orderPayment = (order, paymentResult) => async (dispatch) => {
     method: "PUT",
     data: paymentResult,
     withCredentials: true,
-    url: `http://localhost:5000/api/orders/${order._id}/pay`,
+    url: `${types.api}/api/orders/${order._id}/pay`,
     headers: { "x-auth-token": token },
   })
     .then((res) => {

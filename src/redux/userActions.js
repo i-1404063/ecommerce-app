@@ -13,7 +13,7 @@ const userSignIn = (email, password) => (dispatch) => {
       password: password,
     },
     withCredentials: true,
-    url: "http://localhost:5000/api/users/signin",
+    url: `${types.api}/api/users/signin`,
   })
     .then((res) => {
       const decoded = jwt_decode(res.data);

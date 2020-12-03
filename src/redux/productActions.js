@@ -9,7 +9,7 @@ const listProducts = () => (dispatch) => {
   axios({
     method: "GET",
     withCredentials: true,
-    url: "http://localhost:5000/api/products",
+    url: `${types.api}/api/products`,
   })
     .then((res) => {
       dispatch({ type: types.PRODUCT_LIST_SUCCESS, payload: res.data });
@@ -25,7 +25,7 @@ const productDetail = (id) => (dispatch) => {
   axios({
     method: "GET",
     withCredentials: true,
-    url: `http://localhost:5000/api/products/${id}`,
+    url: `${types.api}/api/products/${id}`,
   })
     .then((res) => {
       dispatch({ type: types.PRODUCT_SUCCESS, payload: res.data });

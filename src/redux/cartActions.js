@@ -5,7 +5,7 @@ const cartItem = (id, qty) => (dispatch, getState) => {
   axios({
     method: "GET",
     withCredentials: true,
-    url: `http://localhost:5000/api/products/${id}`,
+    url: `${types.api}/${id}`,
   })
     .then((res) => {
       dispatch({

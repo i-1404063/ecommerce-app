@@ -6,7 +6,7 @@ const orderMineList = () => async (dispatch) => {
 
   const token = JSON.parse(localStorage.getItem("token"));
   try {
-    const { data } = await axios.get("http://localhost:5000/api/orders/mine", {
+    const { data } = await axios.get(`${types.api}/api/orders/mine`, {
       headers: { "x-auth-token": token },
     });
     dispatch({ type: types.ORDER_LIST_MINE_SUCCESS, payload: data });

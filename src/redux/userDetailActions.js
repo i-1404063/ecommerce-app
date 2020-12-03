@@ -25,11 +25,9 @@ const updateUserProfile = (user) => async (dispatch) => {
 
   const token = JSON.parse(localStorage.getItem("token"));
   try {
-    const res = await axios.put(
-      "http://localhost:5000/api/users/profile",
-      user,
-      { headers: { "x-auth-token": token } }
-    );
+    const res = await axios.put(`${types.api}/api/users/profile`, user, {
+      headers: { "x-auth-token": token },
+    });
     dispatch({ type: types.UPDATE_USERINFO_SUCCESS, payload: res.data });
     dispatch({ type: types.USER_SUCCESS, payload: res.data });
     localStorage.setItem("userInfo", JSON.stringify(res.data));

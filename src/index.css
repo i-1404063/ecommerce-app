@@ -39,7 +39,7 @@ main {
 }
 
 footer {
-  grid: footer;
+  grid-area: footer;
   background-color: #203040;
   color: #ffffff;
 }

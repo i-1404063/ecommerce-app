@@ -1,3 +1,5 @@
+//backend api
+export const api = "https://amazona-backend-heroku.herokuapp.com";
 ///for product list
 export const PRODUCT_LIST_REQUEST = "PRODUCT_LIST_REQUEST";
 export const PRODUCT_LIST_SUCCESS = "PRODUCT_LIST_SUCCESS";

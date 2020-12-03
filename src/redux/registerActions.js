@@ -15,7 +15,7 @@ const signUp = (name, email, password) => (dispatch) => {
       password: password,
     },
     withCredentials: true,
-    url: "http://localhost:5000/api/users/signup",
+    url: `${types.api}/api/users/signup`,
   })
     .then((res) => {
       dispatch({ type: types.USER_SIGNUP_SUCCESS, payload: res.data });
