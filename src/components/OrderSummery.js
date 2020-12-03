@@ -32,7 +32,7 @@ const PlaceOrder = (props) => {
   useEffect(() => {
     const addPaypalScript = async () => {
       const { data } = await axios.get(
-        "http://localhost:5000/api/config/paypal",
+        "https://amazona-backend-heroku.herokuapp.com//api/config/paypal",
         {
           withCredentials: true,
         }

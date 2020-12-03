@@ -6,7 +6,7 @@ const detailUser = (id) => async (dispatch) => {
   const token = JSON.parse(localStorage.getItem("token"));
 
   try {
-    const { data } = await axios.get(`http://localhost:5000/api/users/${id}`, {
+    const { data } = await axios.get(`${types.api}/api/users/${id}`, {
       headers: { "x-auth-token": token },
     });
     dispatch({ type: types.USER_DETAIL_SUCCESS, payload: data });

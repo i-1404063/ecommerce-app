@@ -55,7 +55,7 @@ const detailOrder = (orderId) => (dispatch) => {
 const orderPayment = (order, paymentResult) => async (dispatch) => {
   dispatch({ type: types.PAYMENT_REQUEST, payload: { order, paymentResult } });
   const token = JSON.parse(localStorage.getItem("token"));
-  console.log("payment: ", paymentResult);
+  // console.log("payment: ", paymentResult);
 
   axios({
     method: "PUT",
